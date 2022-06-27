@@ -2,10 +2,11 @@
 
 #include "redblack.h"
 
-/*
- *     Testa a criação de uma árvore RB e a inserção de valores
- */
-int main(int argc, char* argv[]) {
+
+int main(int argc, char* argv[]) 
+{
+    // se argc == 2, a saida será direcionada para o arquivo 
+    // indicado em argv[1];
     // Cria uma arvore RB
     RBTree tree;
     // Insere valores na arvore
@@ -16,9 +17,13 @@ int main(int argc, char* argv[]) {
     tree.insert(7);
     tree.insert(13);
     tree.insert(8);
+    tree.remove(10);
+    tree.insert(16);
+    tree.insert(-1);
+    tree.insert(40);
     if(argc == 1)
-        tree.print();
+      tree.print();
     else
-        tree.print(argv[1]);
+      tree.print(argv[1]);
     return 0;
 }

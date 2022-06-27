@@ -16,9 +16,11 @@ int main(int argc, char* argv[]) {
     tree.insert(7);
     tree.insert(13);
     tree.insert(8);
+    tree.remove(10);
+    tree.print();
     if(argc == 1)
-        tree.print();
+      tree.print();
     else
-        tree.print(argv[1]);
+      tree.print(argv[1]);
     return 0;
 }

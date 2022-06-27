@@ -40,6 +40,7 @@ class RBTree
         RBNode* maximum();
         RBNode* successor(RBNode* node);
         void print();
+        void print(const char* filename);
     private:
         RBNode *root;
         RBNode *nil;
@@ -51,6 +52,8 @@ class RBTree
         void deleteFixUp(RBNode *node);
         void transplant(RBNode *u, RBNode *v);
         void print_tree(RBNode* node, const std::string& prefix, bool isLeft, std::ostream& out);
+        void print_transversal(RBNode* node, std::ostream& out);
+        void deallocate(RBNode* node);
 };
 
 #endif /* REDBLACK_H */

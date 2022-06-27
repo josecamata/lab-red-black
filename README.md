@@ -49,6 +49,11 @@ Veja os comentários TODO para ver onde deve ser implementado.
 
 ## Compilação
 
-Segue o padrão usado até o momento. 
+```
+cmake -B build
+cd build
+make 
+```
+
 
 

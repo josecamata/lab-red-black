@@ -1,6 +1,8 @@
 #include <iostream>
+#include <fstream>
 using namespace std;
 #include "redblack.h"
+#include "config.h" 
 
 // Metodos da classe RBNode
 // Construtors
@@ -8,7 +10,7 @@ RBNode::RBNode(int key): key(key), left(nullptr), right(nullptr), parent(nullptr
 
 
 RBNode::RBNode(int key, RBNode* parent, RBNode* left, RBNode* right, bool color):
-    key(key), parent(parent), left(left), right(right), color(RED) {
+    key(key), parent(parent), left(left), right(right), color(color) {
 }
 
 RBNode::RBNode(const RBNode& other):
@@ -224,30 +226,63 @@ void RBTree::rotateRight(RBNode* x) {
 
 void RBTree::print_tree(RBNode* node, const std::string& prefix, bool isLeft, std::ostream& out)
 {
-    if(node == nullptr)
+    if(node == nil)
         return;
     
     out << prefix;
     out << (isLeft ? "├──" : "└──" );
 
+    string color = node->color?"(R)":"(B)";
     // print the value of the node
-    out <<"["<<node->key<<"]" << node->color?"(R)":"(B)" << std::endl;
+    out <<"["<<node->key<<"]"<< color << std::endl;
 
     print_tree(node->left , prefix + (isLeft ? "│   " : "    "), true, out);
     print_tree(node->right, prefix + (isLeft ? "│   " : "    "), false, out);
 }
 
+void RBTree::print()
+{
+#ifndef ENABLE_CLASSROOM_TESTING
+    print_tree(this->root, "", true, std::cout);
+#else
+    print_transversal(this->root, std::cout);
+#endif
+    std::cout << std::endl;
+}
+
+void RBTree::print(const char* fname)
+{
+    std::ofstream out(fname);
+#ifndef ENABLE_CLASSROOM_TESTING
+    print_tree(this->root, "", true, out);
+#else
+    print_transversal(this->root, out);
+#endif
+    out << std::endl;
+    out.close();
+}
+
+void RBTree::print_transversal(RBNode* node, std::ostream& out)
+{
+    if(node == nil)
+        return;
+         
+    print_transversal(node->left, out);
+    out << node->key << " (" << node->color << ") ";
+    print_transversal(node->right, out);
+}
+
 // TODO: implementar o método insertFixUp
 void RBTree::insertFixUp(RBNode *node)
 {
-
+   
 
 }
 
 // TODO: implementar o método deleteFixUp
 void RBTree::deleteFixUp(RBNode *node)
 {
-
+   
 }
 
 // TODO: implementar o destrutor
@@ -256,6 +291,11 @@ RBTree::~RBTree()
 
 }
 
+
+void RBTree::deallocate(RBNode* node)
+{
+
+}
 
 
 
