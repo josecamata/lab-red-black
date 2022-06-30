@@ -61,7 +61,7 @@ make
 ctest
 ```
 **Atenção**:
-Para visualiza uma saida mais amigável da estrutura da árvore, dasabilite a flag ENABLE_CLASSROOM_TESTING no cmake. Neste caso, vc deve fazer:
+Para visualiza uma saída mais amigável da estrutura da árvore, dasabilite a flag ENABLE_CLASSROOM_TESTING no cmake. Neste caso, vc deve fazer:
 
 ```
 cmake -B build -DENABLE_CLASSROOM_TESTING=OFF
