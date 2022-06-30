@@ -1,4 +1,4 @@
-# Arvore Vermelho-Preto
+# Árvore Vermelho-Preto :evergreen_tree: :red_circle: :black_circle:
 
 ## Definição
 Uma árvore vermelho-preto é uma árvore de busca binária com um bit extra de armazenamento por nó: sua cor
@@ -23,25 +23,29 @@ Uma árvore vermelho-preto é uma árvore de busca binária que satisfaz as segu
 
 Compreender e praticar a implementação em C++ de árvores balanceadas e outras funções relacionadas e específicas das árvores vermelho-preto.
 
-## Código 
+## :notebook: Código 
 
 Um código base já é fornecido como ponto de partida. Ela tem a seguinte estrutura:
 ```
 /
 └── librc
-|   └── [redblack.h]
-|   └── [redblack.cpp]
-|   └── [CMakeLists.txt]
-└── [main.cpp]
+    └── [redblack.h]
+    └── [redblack.cpp]
+    └── [CMakeLists.txt]
+└── tests
+     └── test1.cpp
+     └── test2.cpp
+     └── test3.cpp
+     └── CMakeLists.txt
 └── README.md
 └── CMakeLists.txt
 ```
 
-Nos arqquivos [redblack.h](librc/redblacl.h) e [redblack.cpp](librc/redblack.h) estão presentes as implementações das principais rotinas relacionadas a árvores de pesquisa binária: inserção, remoção, maximo, mínimo e sucessor. Além disso, estão presentes rotinas auxiliares, como as rotações simples a esquerda e direita, entre outras. 
+Nos arquivos [redblack.h](librc/redblacl.h) e [redblack.cpp](librc/redblack.h) estão presentes as implementações das principais rotinas relacionadas a árvores de pesquisa binária: inserção, remoção, maximo, mínimo e sucessor. Além disso, estão presentes rotinas auxiliares, como as rotações simples a esquerda e direita, entre outras. Na pasta tests, três programas simples testam a implementação desenvolvida.
 
 O [capitulo 13 do livro Algoritmo: Teoria e Prática](docs/Cap13RB.pdf) descreve de forma detalhada a estrutura e as operações da árvore vermelho-preta. Usem como referência para a implementação nessa atividade.
 
-## O que deve ser feito
+##  O que deve ser feito :question:
 
 Nesta atividade, deve-se implementar as rotinas que garantem as propriedades das árvores vermelho-preta. As rotinas são:
  - *insertFixUp*: chamada apos a insersão de uma nova chave
@@ -49,13 +53,15 @@ Nesta atividade, deve-se implementar as rotinas que garantem as propriedades das
 
 Veja os comentários TODO para ver onde deve ser implementado. 
 
-## Compilação
-
+## :computer: Compilação e Testes
 ```
 cmake -B build
 cd build
 make 
+ctest 
 ```
+
+## :date: Data de Entrega: 07/07/2022
 
 
 
