@@ -57,9 +57,19 @@ Veja os comentários TODO para ver onde deve ser implementado.
 ```
 cmake -B build
 cd build
-make 
-ctest 
+make
+ctest
 ```
+**Atenção**:
+Para visualiza uma saida mais amigável da estrutura da árvore, dasabilite a flag ENABLE_CLASSROOM_TESTING no cmake. Neste caso, vc deve fazer:
+
+```
+cmake -B build -DENABLE_CLASSROOM_TESTING=OFF
+cd build
+make
+```
+
+Agora você poderá rodar os testes individualmente na pasta build/tests.
 
 ## :date: Data de Entrega: 07/07/2022
 
