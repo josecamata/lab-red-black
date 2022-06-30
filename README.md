@@ -26,22 +26,24 @@ Compreender e praticar a implementação em C++ de árvores balanceadas e outras
 ## Código 
 
 Um código base já é fornecido como ponto de partida. Ela tem a seguinte estrutura:
+```
 /
 └── librc
-|   └── [redblack.h](librb/redblack.h)
-|   └── [redblack.cpp](librb/redblack.cpp)
-|   └── [CMakeLists.txt](librb/CMakeLists.txt) 
-└── (main.cpp)[main.cpp]
+|   └── [redblack.h]
+|   └── [redblack.cpp]
+|   └── [CMakeLists.txt]
+└── [main.cpp]
 └── README.md
 └── CMakeLists.txt
+```
 
-Nos arqquivos redblack.h e redblack.cpp estão presentes as implementações das principais rotinas relacionadas a arvores de pesquisa binária: inserção, remoção, maximo, mínimo e sucessor. Além disso, estão presentes rotinas auxiliares, como as rotações simples a esquerda e direita, entre outras. 
+Nos arqquivos [redblack.h](librc/redblacl.h) e [redblack.cpp](librc/redblack.h) estão presentes as implementações das principais rotinas relacionadas a árvores de pesquisa binária: inserção, remoção, maximo, mínimo e sucessor. Além disso, estão presentes rotinas auxiliares, como as rotações simples a esquerda e direita, entre outras. 
 
-O [capitulo 13 do livro Algoritmo: Teoria e Prática](docs/Cap13RB.pdf) descreve de forma detalhada a estrutura e as operações de uma arvore vermelha e preta. Usem como referencia para a implementação nessa atividade.
+O [capitulo 13 do livro Algoritmo: Teoria e Prática](docs/Cap13RB.pdf) descreve de forma detalhada a estrutura e as operações da árvore vermelho-preta. Usem como referência para a implementação nessa atividade.
 
 ## O que deve ser feito
 
-Nesta atividade, deve-se implementar as rotinas que garantem as propriedades das arvores vermelho preta. As rotinas são:
+Nesta atividade, deve-se implementar as rotinas que garantem as propriedades das árvores vermelho-preta. As rotinas são:
  - *insertFixUp*: chamada apos a insersão de uma nova chave
  - *deleteFixUp*: chamada durante a remoção de uma chave da arvore.
 
