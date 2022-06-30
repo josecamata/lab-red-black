@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(redblack VERSION 0.1.0)
 
-option(ENABLE_CLASSROOM_TESTING "Enable testing" OFF)
+option(ENABLE_CLASSROOM_TESTING "Enable testing" ON)
 
 configure_file(${PROJECT_SOURCE_DIR}/config.h.in
                ${PROJECT_SOURCE_DIR}/librb/config.h)
